@@ -1,0 +1,81 @@
+*{
+  font-family:'Proxima','Nova',Helvetica,Arial,sans-serif;
+  background-color:#f2f2f2;
+  color:#222;
+}
+body div{
+  margin-left:20px;
+}
+.heading{
+  text-align:center;
+  font-size:22px;
+
+}
+.heading img{
+  height:230px;
+  display:block;
+  margin:auto;
+}
+label input{
+  visibility:hidden;
+  position:absolute;
+}
+label input+img{
+  cursor:pointer;
+  border:2px solid transparent;
+}
+label input:checked+img{
+  border:2px solid #0D4F8B
+}
+#Q5 .button{
+  display:inline-block;
+  margin-right:7px;
+}
+#Q5 img{
+  height:200px;
+  margin:auto;
+}
+.submit{
+  margin:50px auto;
+}
+.submit button{
+  display:block;
+  margin:auto;
+  background-color:#0D4F8B;
+  color:white;
+  font-size:24px;
+  padding:10px 20px;
+  border-radius:10px;
+}
+
+@media only screen and (max-width: 800px){
+  .heading{
+    font-size:18px;
+  }
+  .heading img{
+    height:180px;
+  }
+  div h2{
+    font-size:16px;
+  }
+  #Q5 img{
+    height:150px;
+  }
+}
+@media only screen and (max-width:400px){
+  .heading{
+    font-size:15px;
+  }
+  .heading img{
+    height:140px;
+  }
+  div h2{
+    font-size:13px;
+  }
+  #Q5 img{
+    height:100px;
+  }
+  .submit button{
+    font-size:20px;
+  }
+} 

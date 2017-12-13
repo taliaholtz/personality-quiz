@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+  <head>
+    <title>Pancakes!</title>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" type="image/png" href="./images/buzzfeed-icon.png">
+    <link rel="stylesheet" type="text/css" href="./As03.css">
+  </head>
+  <body>
+    <div class="heading">
+      <h1>What kind of pancake are you?</h1>
+      <img title="pancakes are bae" src="https://www.eggs.ca/assets/RecipePhotos/_resampled/FillWyIxMjgwIiwiNjIwIl0/Fluffy-Pancakes-New-CMS.jpg" alt="PANCAKES">
+    </div>
+    <div id="Q1">
+       <h2>Is fruit a dessert?</h2>
+       <select>
+           <option disabled selected value> -- choose one -- </option>            
+           <option class="q1" value="no">No</option>            
+           <option class="q1" value="yes">Yes</option>
+           <option class="q1" value="maybe">Sometimes</option>
+       </select>
+    </div>
+    <div id="Q2">
+       <h2>How many days per week do you eat breakfast?</h2>
+       <input class="q2" type="number" name="quantity" min="0" max="7">
+    </div>
+    <div id="Q3">
+       <h2>If you had no plans for 24 hours, what would you do?</h2>
+       <input class="q3" type="checkbox" value="sleep">Sleep in<br/>
+       <input class="q3" type="checkbox" value="party">Stay out late<br/>       
+       <input class="q3" type="checkbox" value="takeout">Order food<br/>
+       <input class="q3" type="checkbox" value="cook">Make food<br/>
+       <input class="q3" type="checkbox" value="exercise">Exercise<br/>
+       <input class="q3" type="checkbox" value="adventure">Go somewhere spontaneous<br/>       
+       <input class="q3" type="checkbox" value="tv">Watch TV/movies<br/>
+       <input class="q3" type="checkbox" value="read">Read
+    </div>
+    <div id="Q4">
+       <h2>What is your favorite meal of the day?</h2>
+       <input class="q4" type="radio" value="breakfast">Breakfast<br/>
+       <input class="q4" type="radio" value="brunch">Brunch<br/>
+       <input class="q4" type="radio" value="lunch">Lunch<br/>
+       <input class="q4" type="radio" value="dinner">Dinner<br/>
+       <input class="q4" type="radio" value="midnight">Midnight feast    
+    </div>
+    <div id="Q5">
+        <h2>Which of these is your ideal breakfast?</h2>
+        <label class="button">
+            <input class="q5" type="radio" value="eggs"/>
+            <img class="q5" title="eggs" src="./images/eggs.jpg" alt="eggs">               
+        </label>
+        <label class="button">
+            <input class="q5" type="radio" value="waffles"/>
+            <img class="q5" title="waffles" src="./images/waffles.jpg" alt="waffles">
+        </label>
+        <label class="button">
+            <input class="q5" type="radio" value="shake"/>
+            <img class="q5" title="breakfast shake" src="./images/breakfast-shake.jpg" alt="shake">
+        </label>
+        <label class="button">
+            <input class="q5" type="radio" value="cereal"/>
+            <img class="q5" title="cereal" src="./images/cereal.jpg" alt="cereal">
+        </label>                
+    </div>
+    <div class="submit">
+        <button onclick="myResults();">Get my results!</button>            
+    </div>
+    <script type="text/javascript" src="./As03_v2.js"></script>    
+  </body>
+</html> 
