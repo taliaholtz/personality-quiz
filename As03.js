@@ -19,7 +19,12 @@ var myResults=function(){
         myScore++;
     }
     
-    var ans3=document.querySelectorAll('input[class="q3"]:checked').value;        
+    var dayOff={};
+    var ans3=document.querySelectorAll('input[class="q3"]:checked');
+    for (var i=0;i<ans3.length;i++){
+        dayOff["activity "+[i+1]]=ans3[i].value;
+    }
+    console.log(dayOff);        
     if(ans3=="sleep"){
         myScore++;
     }else if(ans3=="party"){
@@ -58,13 +63,35 @@ var myResults=function(){
         myScore+=0;
     }
 
+    //results
+    var resultDiv=document.createElement('div');
+    resultDiv.className="results";
+    document.body.appendChild(resultDiv);
+    var resultImg=document.createElement('img');
+    resultDiv.appendChild(resultImg);
+    var resultText=document.createElement('p');
+    resultDiv.appendChild(resultText);
+
     if(myScore<=4){
-        document.write("<img style='height:200px;' src='./images/plain-pancakes.jpg' alt='pancakes'><br/>You are plain pancakes. You take life at face value and don't need anything extra to make you happy.");
+        resultImg.src="./images/plain-pancakes.jpg";
+        resultImg.alt="pancakes";
+        resultText.textContent="You are plain pancakes, and you are beautiful. You take life at face value and don't need anything extra to make you happy.";
     }else if(myScore>4&&myScore<=8){
-        document.write("<img style='height:200px;' src='./images/banana-pancakes.jpg' alt='pancakes'><br/>You are banana pancakes. You wake up too early. Maybe we can sleep in?");
+        resultImg.src="./images/banana-pancakes.jpg";
+        resultImg.alt="pancakes";
+        resultText.textContent="You are banana pancakes. You wake up too early. Maybe we can sleep in?";    
     }else if(myScore>8&&myScore<=12){
-        document.write("<img style='height:200px;' src='./images/blueberry-pancakes.jpg' alt='pancakes'><br/>You are blueberry pancakes. You appreciate the little things in life and try to live your best self every day.");
+        resultImg.src="./images/blueberry-pancakes.jpg";
+        resultImg.alt="pancakes";
+        resultText.textContent="You are blueberry pancakes. You appreciate the little things in life and try to live your best self every day.";
     }else if(myScore>12){
-        document.write("<img style='height:200px;' src='./images/chocolate-pancakes.jpg' alt='pancakes'><br/>You are chocolate chip pancakes. You live in the moment and look for the excitement in every day.");
+        resultImg.src="./images/chocolate-pancakes.jpg";
+        resultImg.alt="pancakes";
+        resultText.textContent="You are chocolate chip pancakes. You live in the moment and look for the excitement in every day.";
     }
+    window.scrollTo(0,document.body.scrollHeight);    
 }
+
+window.onbeforeunload = function () {
+    window.scrollTo(0, 0);
+  }

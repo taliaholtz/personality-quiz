@@ -1,3 +1,6 @@
+window.scroll{
+  behavior:smooth;
+}
 *{
   font-family:'Proxima','Nova',Helvetica,Arial,sans-serif;
   background-color:#f2f2f2;
@@ -47,12 +50,22 @@ label input:checked+img{
   padding:10px 20px;
   border-radius:10px;
 }
+.results{
+  margin:50px;
+  border:1px solid black;
+  text-align:center;
+}
+.results img{
+  display:block;
+  height:200px;
+  margin:10px auto;
+}
 
 @media only screen and (max-width: 800px){
   .heading{
     font-size:18px;
   }
-  .heading img{
+  .heading img,.results img{
     height:180px;
   }
   div h2{
@@ -66,7 +79,7 @@ label input:checked+img{
   .heading{
     font-size:15px;
   }
-  .heading img{
+  .heading img,.results img{
     height:140px;
   }
   div h2{
